@@ -1,5 +1,6 @@
 :root {
-  --color-theme: aqua;
+  --color-theme: darkgrey;
+  --cont-color: aqua;
 }
 
 body {
@@ -18,7 +19,7 @@ body {
   height: auto;
   border-radius: 20px;
 
-  background: #f1f1f1;
+  background: var(--cont-color);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -44,13 +45,20 @@ h3 {
   cursor: pointer;
   font-family: monospace;
   font-weight: bold;
-  color: #f1f1f1;
-  border: 0
+  color: var(--cont-color);
+  border: 0;
+}
+
+button:focus {
+  outline: 0;
+}
+button:hover {
+  transform: scale(1.1);
 }
 
 #tweet-quote {
   margin: auto;
-  color: #f1f1f1;
+  color: var(--cont-color);
   font-size: 20px;
 }
 
@@ -63,6 +71,9 @@ h3 {
   justify-content: center;
   /* border: black 2px solid; */
   margin-left: 10%;
+}
+#twitter-container:hover {
+  transform: scale(1.1)
 }
 
 #button-div {
